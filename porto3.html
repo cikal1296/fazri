@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portofolio_fazri</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 50px; /* Space for the navbar */
+        }
+
+        .navbar {
+          border-radius: 20px;
+             border-top: 1px solid white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            padding: 15px 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: black;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 5%;
+            padding: 10px;
+        }
+        p{
+          color: 
+          white;
+          font-size: 20px;
+          font-family: Sans-Serif;
+        }
+        .one{
+          
+          width: 80%;
+          height: 300px;
+          align-items: center;
+          justify-content: center;
+          padding-top: 30px;
+          box-shaow: 0 7px 15px 0 rgba(255,255,255,0.5);
+        }
+        img{
+          
+        }
+        .one img{
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          
+            box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.7);
+        }
+        h3{
+          color: orange;
+        }
+         .pp {
+            overflow: hidden;
+            border-right: .15em solid orange; /* menambahkan kursor */
+            white-space: nowrap; /* mencegah teks membungkus ke baris berikutnya */
+            margin: 0 auto; /* memposisikan ke tengah */
+            letter-spacing: .15em; /* menambahkan jarak antar huruf */
+            animation: typing 5s steps( 18) infinite,
+                       blink-caret .75s step-end infinite;
+        }
+
+        /* efek mengetik */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 80% }
+        }
+
+        /* efek berkedip pada kursor */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            10% { border-color: orange; }
+        }
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+h2{
+  color: white;
+}
+.text{
+  font-size: 0.80em;
+}
+.silled{
+  transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+}
+@keyframestesting{
+  from {
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+.content img{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  
+}
+.content{
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: space-beetwen;
+}
+.logoo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logoo p {
+  padding-top: 20px;
+    margin: 0; /* Hapus margin default untuk memastikan alignment yang benar */
+}
+
+.logoo img {
+  padding-top:25px ;
+  padding-right:10px ;
+    width: 30px;
+    height: 30px;
+}
+hr{
+  width: 50%;
+  margin-top: 150px;
+  color: white;
+  border-radius: 10%;
+  
+}
+#text1{
+  font-size: 15px;
+}
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Main content of the page goes here -->
+        <div class="logoo">
+        <p><i>fazri_intro<i></p>
+        <img src="logo.jpg">
+        </div>
+    </div>
+<center><div class="one"><img src="pp.jpg">
+<div class="pp"><h3 color="white">this is my portofolio</h3></div>
+<div class="intro">
+  <p>halo namaku</p>
+  <h2 class="silled">CIKAL MUHAMMAD FAZRI</h2>
+  <p class="text">web devlop</p>
+</div>
+<hr color="" size="2">
+<div id="text1"></div>
+</div></center>
+   
+   
+   
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#comment">Comment</a></li>
+        </ul>
+    </nav>
+    <script>
+      const texts1 = [
+        "Haloooo",
+        "Welcome to my gabut side",
+        "Enjoy Your Stay!",
+        "Lanciau yang liat",
+        "Have a Great Day!",
+      ];
+      const colors = [
+        "#FF5733",
+        "#33FF57",
+        "#3357FF",
+        "#FF33A6",
+        "#A633FF",
+        "#FFC133",
+      ];
+
+      function getRandomText(textArray) {
+        return textArray[Math.floor(Math.random() * textArray.length)];
+      }
+
+      function getRandomColor() {
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      function updateText() {
+        const text1 = document.getElementById("text1");
+        const text2 = document.getElementById("text2");
+
+        text1.innerText = getRandomText(texts1);
+        text1.style.color = getRandomColor();
+
+        text2.innerText = getRandomText(texts2);
+        text2.style.color = getRandomColor();
+      }
+      setInterval(updateText, 2000);
+    </script>
+</body>
+</html>
